@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberfall Showroom</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1a1d22; color: #e8ecf0; font: 14px/1.4 system-ui, sans-serif; overflow: hidden; }
+  canvas { display: block; }
+  #ui { position: fixed; left: 16px; top: 16px; display: flex; flex-direction: column; gap: 10px; max-width: 320px; }
+  #ui.hide { display: none; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: .08em; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; }
+  button { background: #2a2f37; color: inherit; border: 1px solid #3b424d; border-radius: 6px; padding: 6px 10px; cursor: pointer; font: inherit; }
+  button.on { border-color: #4b9dff; background: #24364f; }
+  .sw { width: 26px; height: 26px; border-radius: 50%; padding: 0; }
+  #info { opacity: .7; font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="ui">
+  <h1 id="name"></h1>
+  <div class="row" id="cars"></div>
+  <div class="row" id="views"></div>
+  <div class="row" id="paints"></div>
+  <div class="row" id="finishes"></div>
+  <div class="row"><button id="spin">Auto-rotate</button><button id="wire">Wireframe</button><button id="lights" class="on">Lights</button></div>
+  <div id="info"></div>
+</div>
+<script type="module" src="./showroom.js"></script>
+</body>
+</html>
